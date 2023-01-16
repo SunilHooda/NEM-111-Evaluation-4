@@ -18,6 +18,10 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
+
 app.use("/users", userRouter);
 //app.use(authenticateMiddleware);
 app.use("/posts", postRouter);
